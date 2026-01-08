@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIZUMATCH</title>
+<!-- =========================
+        CSS部
+=========================== -->
+    <link rel="stylesheet" href="./css/reset.css"> 
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/color.css">
+    <link rel="stylesheet" href="./css/circle.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/header-animation.css">
+    <link rel="stylesheet" href="./css/section-1.css">
+    <link rel="stylesheet" href="./css/section-2.css">
+    <link rel="stylesheet" href="./css/section-3.css">
+</head>
+<body>
+<!-- =========================
+          ヘッター部
+=========================== -->
+<header class="site-header">
+    <div class="header-inner">
+
+        <!-- ハンバーガーメニュー（左端） -->
+        <button class="hamburger" id="hamburger" aria-label="メニュー">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- サークル名（中央） -->
+        <div class="header-left">
+            <img src="./image/MIZUMATCH.jpg" alt="MIZUMATCH" class="site-icon">
+            <span class="site-title">MIZUMATCH</span>
+        </div>
+
+        <!-- PCナビゲーション（中央PCのみ表示） -->
+        <nav class="nav-pc">
+            <ul>
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#">私たちについて</a></li>
+                <li><a href="#">活動報告</a></li>
+                <li><a href="#">SNS</a></li>
+            </ul>
+        </nav>
+
+        <!-- 背景色変更ボタン（PC右端） -->
+        <button class="color-button pc-only" id="colorBtn">背景色</button>
+
+        <!-- 背景色変更ボタン（スマホ右端） -->
+        <button class="color-button sp-only color-sp-right" id="colorBtnSpHeader">色</button>
+
+    </div>
+</header>
+<!-- スマホメニュー（左スライド） -->
+<nav class="nav-sp" id="navSp">
+    <ul class="nav-sp-list">
+        <li><a href="#">ホーム</a></li>
+        <li><a href="#">私たちについて</a></li>
+        <li><a href="#">活動報告</a></li>
+        <li><a href="#">SNS</a></li>
+    </ul>
+
+    <div class="nav-sp-footer">
+        <button class="color-button" id="colorBtnSpMenu">背景色変更</button>
+    </div>
+</nav>
+<!-- メニュー外タップ用オーバーレイ -->
+<div class="overlay" id="overlay"></div>
+<!-- カラーピッカー -->
+<input type="color" id="colorPicker" hidden>
+<!-- =========================
+          メイン部
+=========================== -->
+<main>
+    <!-- MIZUMATCHについて -->
+    <section class="about" id="about">
+    <div class="about-inner">
+        <h2 class="section-title">
+        <span>MIZUMATCHについて</span>
+        </h2>
+
+        <div class="about-content">
+        <!-- 左：画像 -->
+        <div class="about-image">
+            <img src="./image/MIZUMATCH.jpg" alt="MIZUMATCHについて">
+        </div>
+
+        <!-- 右：文章 -->
+        <div class="about-text-area">
+            <p class="about-text about-main">
+            MIZUMATCHは <strong>2019年6月</strong> に創立
+            </p>
+
+            <p class="about-text about-sub">
+            長野大学公認サークル
+            </p>
+
+            <p class="about-text">
+            ボランティア活動やイベントの企画・運営
+            </p>
+
+            <!-- 人数 -->
+            <div class="about-members">
+            <p class="about-text members-title">現在の活動人数</p>
+            <p class="about-text members-line">
+                2年：21人　／　1年：40人
+                <span class="members-total">計64人</span>
+            </p>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+    <!-- mottoについて -->
+    <section class="motto-vision">
+    <div class="motto-vision-inner">
+
+        <!-- セクションタイトル -->
+        <h2 class="section-title">
+        <span>mottoについて</span>
+        </h2>
+
+        <!-- 上段：画像＋コンセプト -->
+        <div class="motto-content">
+        <div class="motto-image">
+            <img src="./image/MIZUMATCH-1.png" alt="MIZUMATCH コンセプト">
+        </div>
+
+        <div class="motto-text">
+            <p class="motto-equation">
+            水の活性化<span class="motto-x">×</span>町の活性化
+            </p>
+
+            <p class="motto-brand">MIZUMATCH</p>
+
+            <p class="motto-copy">
+            水と街をマッチングさせたまちづくり
+            </p>
+        </div>
+        </div>
+
+        <!-- 下段：ビジョン -->
+        <div class="vision-block">
+        <h3 class="vision-catch">
+            <span>学生の力でまちに新しい流れを。</span>
+            <span>学生の力でまちにうるおいを。</span>
+        </h3>
+        </div>
+
+    </div>
+    </section>
+    <!-- これまでの活動 -->
+<section class="activities">
+  <div class="activities-inner">
+
+    <!-- セクションタイトル -->
+    <h2 class="section-title">
+      <span>これまでの活動</span>
+    </h2>
+
+    <!-- サブタイトル -->
+    <p class="activities-lead">主なボランティア活動</p>
+
+    <!-- 活動リスト -->
+    <ul class="activities-list">
+      <li>
+        <span class="activities-year">2020年～2026年</span>
+        <span class="activities-name">上田氷灯ろう夢まつり</span>
+      </li>
+      <li>
+        <span class="activities-year">2023年～2025年</span>
+        <span class="activities-name">別所線とは走ろう、歩こう!! ラン＆ウォーク</span>
+      </li>
+      <li>
+        <span class="activities-year">2023年～2025年</span>
+        <span class="activities-name">信州ルネッサンス野外フェスティバル</span>
+      </li>
+      <li>
+        <span class="activities-year">2023年～2025年</span>
+        <span class="activities-name">花火を楽しむ会</span>
+      </li>
+      <li>
+        <span class="activities-year">2023年～2025年</span>
+        <span class="activities-name">信州爆水RUN in 衣田川</span>
+      </li>
+      <li>
+        <span class="activities-year">2024年</span>
+        <span class="activities-name">キモノマルシェ in 信州上田</span>
+      </li>
+      <li>
+        <span class="activities-year">2025年11月</span>
+        <span class="activities-name">産業未来フェス</span>
+      </li>
+    </ul>
+
+  </div>
+</section>
+
+
+
+
+</main>
+<!-- =========================
+          フッター部
+=========================== -->
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <!-- 左：ナビ -->
+        <div class="footer-left">
+            <nav class="footer-nav">
+                <ul class="footer-nav-list">
+                    <li><a href="#">ホーム</a></li>
+                    <li><a href="#">私たちについて</a></li>
+                    <li><a href="#">イベント情報</a></li>
+                    <li><a href="#">ブログ</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- 中央：イベント -->
+        <div class="footer-center">
+            <h3 class="footer-center-title">イベント情報</h3>
+            <ul class="footer-event-list">
+                <li><a href="#">イベント詳細</a></li>
+                <li><a href="#">申込方法</a></li>
+                <li><a href="#">過去のイベント</a></li>
+            </ul>
+        </div>
+
+        <!-- 右：SNS -->
+        <div class="footer-right">
+            <div class="footer-sns">
+                <a href="#" class="sns-link" aria-label="Instagram">
+                    <span class="sns-icon">
+                        <img src="./image/Instagram.png" alt="">
+                    </span>
+                    <span class="sns-name">Instagram</span>
+                </a>
+
+                <a href="#" class="sns-link" aria-label="Facebook">
+                    <span class="sns-icon">
+                        <img src="./image/Facebook.png" alt="">
+                    </span>
+                    <span class="sns-name">Facebook</span>
+                </a>
+
+                <a href="#" class="sns-link" aria-label="Gmail">
+                    <span class="sns-icon">
+                        <img src="./image/Gmail.png" alt="">
+                    </span>
+                    <span class="sns-name">Gmail</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-copy-container">
+        <p class="footer-copy">© 2026 MIZUMATCH</p>
+    </div>
+</footer>
+
+<!-- =========================
+          JS部
+=========================== -->
+<script src="./js/header.js"></script>
+</body>
+</html>
