@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIZUMATCH</title>
+<!-- =========================
+        CSS部
+=========================== -->
+    <link rel="stylesheet" href="./css/reset.css"> 
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/color.css">
+    <link rel="stylesheet" href="./css/circle.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/header-animation.css">
+    <link rel="stylesheet" href="./css/section-1.css">
+    <link rel="stylesheet" href="./css/section-2.css">
+    <link rel="stylesheet" href="./css/section-3-1.css">
+    <link rel="stylesheet" href="./css/section-3-2.css">
+    <link rel="stylesheet" href="./css/section-3-3.css">
+    <link rel="stylesheet" href="./css/section-3-4.css">
+    <link rel="stylesheet" href="./css/section-3-5.css">
+</head>
+<body>
+<!-- =========================
+          ヘッター部
+=========================== -->
+<header class="site-header">
+    <div class="header-inner">
+
+        <!-- ハンバーガーメニュー（左端） -->
+        <button class="hamburger" id="hamburger" aria-label="メニュー">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- サークル名（中央） -->
+        <div class="header-left">
+            <img src="./image/MIZUMATCH.jpg" alt="MIZUMATCH" class="site-icon">
+            <span class="site-title">MIZUMATCH</span>
+        </div>
+
+        <!-- PCナビゲーション（中央PCのみ表示） -->
+        <nav class="nav-pc">
+            <ul>
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#">私たちについて</a></li>
+                <li><a href="#">活動報告</a></li>
+                <li><a href="#">SNS</a></li>
+            </ul>
+        </nav>
+
+        <!-- 背景色変更ボタン（PC右端） -->
+        <button class="color-button pc-only" id="colorBtn">背景色</button>
+
+        <!-- 背景色変更ボタン（スマホ右端） -->
+        <button class="color-button sp-only color-sp-right" id="colorBtnSpHeader">色</button>
+
+    </div>
+</header>
+<!-- スマホメニュー（左スライド） -->
+<nav class="nav-sp" id="navSp">
+    <ul class="nav-sp-list">
+        <li><a href="#">ホーム</a></li>
+        <li><a href="#">私たちについて</a></li>
+        <li><a href="#">活動報告</a></li>
+        <li><a href="#">SNS</a></li>
+    </ul>
+
+    <div class="nav-sp-footer">
+        <button class="color-button" id="colorBtnSpMenu">背景色変更</button>
+    </div>
+</nav>
+<!-- メニュー外タップ用オーバーレイ -->
+<div class="overlay" id="overlay"></div>
+<!-- カラーピッカー -->
+<input type="color" id="colorPicker" hidden>
+<!-- =========================
+          メイン部
+=========================== -->
+<main>
+    <!-- MIZUMATCHについて -->
+    <section class="about" id="about">
+    <div class="about-inner">
+        <h2 class="section-title">
+        <span>MIZUMATCHについて</span>
+        </h2>
+
+        <div class="about-content">
+        <!-- 左：画像 -->
+        <div class="about-image">
+            <img src="./image/MIZUMATCH.jpg" alt="MIZUMATCHについて">
+        </div>
+
+        <!-- 右：文章 -->
+        <div class="about-text-area">
+            <p class="about-text about-main">
+            MIZUMATCHは <strong>2019年6月</strong> に創立
+            </p>
+
+            <p class="about-text about-sub">
+            長野大学公認サークル
+            </p>
+
+            <p class="about-text">
+            ボランティア活動やイベントの企画・運営
+            </p>
+
+            <!-- 人数 -->
+            <div class="about-members">
+            <p class="about-text members-title">現在の活動人数</p>
+            <p class="about-text members-line">
+                2年：21人　／　1年：40人
+                <span class="members-total">計64人</span>
+            </p>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+    <!-- mottoについて -->
+    <section class="motto-vision">
+    <div class="motto-vision-inner">
+
+        <!-- セクションタイトル -->
+        <h2 class="section-title">
+        <span>mottoについて</span>
+        </h2>
+
+        <!-- 上段：画像＋コンセプト -->
+        <div class="motto-content">
+        <div class="motto-image">
+            <img src="./image/MIZUMATCH-1.png" alt="MIZUMATCH コンセプト">
+        </div>
+
+        <div class="motto-text">
+            <p class="motto-equation">
+            水の活性化<span class="motto-x">×</span>町の活性化
+            </p>
+
+            <p class="motto-brand">MIZUMATCH</p>
+
+            <p class="motto-copy">
+            水と街をマッチングさせたまちづくり
+            </p>
+        </div>
+        </div>
+
+        <!-- 下段：ビジョン -->
+        <div class="vision-block">
+        <h3 class="vision-catch">
+            <span>学生の力でまちに新しい流れを。</span>
+            <span>学生の力でまちにうるおいを。</span>
+        </h3>
+        </div>
+
+    </div>
+    </section>
+    <!-- これまでの活動-パターン1 section-3-1 -->
+    <section class="activities">
+    <div class="activities-inner">
+
+        <h2 class="section-title">
+        <span>これまでの活動 パターン１</span>
+        </h2>
+
+        <p class="activities-lead">主なボランティア活動</p>
+
+        <ul class="activities-list">
+        <li>
+            <time class="activities-year">2020年～2026年</time>
+            <span class="activities-name">上田氷灯ろう夢まつり</span>
+        </li>
+        <li>
+            <time class="activities-year">2023年～2025年</time>
+            <span class="activities-name">別所線とは走ろう、歩こう!! ラン＆ウォーク</span>
+        </li>
+        <li>
+            <time class="activities-year">2023年～2025年</time>
+            <span class="activities-name">信州ルネッサンス野外フェスティバル</span>
+        </li>
+        <li>
+            <time class="activities-year">2023年～2025年</time>
+            <span class="activities-name">花火を楽しむ会</span>
+        </li>
+        <li>
+            <time class="activities-year">2023年～2025年</time>
+            <span class="activities-name">信州爆水RUN in 衣田川</span>
+        </li>
+        <li>
+            <time class="activities-year">2024年</time>
+            <span class="activities-name">キモノマルシェ in 信州上田</span>
+        </li>
+        <li>
+            <time class="activities-year">2025年11月</time>
+            <span class="activities-name">産業未来フェス</span>
+        </li>
+        </ul>
+
+    </div>
+    </section>
+    <!-- これまでの活動-パターン2 section-3-2 -->
+    <section class="section3-2-activities">
+    <div class="section3-2-inner">
+
+        <!-- セクションタイトル -->
+        <h2 class="section3-2-title">
+        <span>これまでの活動 パターン2</span>
+        </h2>
+
+        <!-- サブタイトル -->
+        <p class="section3-2-lead">主なボランティア活動</p>
+
+        <!-- 活動リスト -->
+        <ul class="section3-2-list">
+
+        <li class="section3-2-card">
+            <div class="section3-2-image section3-2-no-image">
+            <span class="section3-2-no-image-text">No Image</span>
+            </div>
+            <div class="section3-2-content">
+            <time class="section3-2-year">2020年～2026年</time>
+            <p class="section3-2-name">上田氷灯ろう夢まつり</p>
+            </div>
+        </li>
+
+        <li class="section3-2-card">
+            <div class="section3-2-image section3-2-no-image">
+            <span class="section3-2-no-image-text">No Image</span>
+            </div>
+            <div class="section3-2-content">
+            <time class="section3-2-year">2023年～2025年</time>
+            <p class="section3-2-name">別所線とは走ろう、歩こう!! ラン＆ウォーク</p>
+            </div>
+        </li>
+
+        <li class="section3-2-card">
+            <div class="section3-2-image section3-2-no-image">
+            <span class="section3-2-no-image-text">No Image</span>
+            </div>
+            <div class="section3-2-content">
+            <time class="section3-2-year">2023年～2025年</time>
+            <p class="section3-2-name">信州ルネッサンス野外フェスティバル</p>
+            </div>
+        </li>
+
+        <li class="section3-2-card">
+            <div class="section3-2-image section3-2-no-image">
+            <span class="section3-2-no-image-text">No Image</span>
+            </div>
+            <div class="section3-2-content">
+            <time class="section3-2-year">2023年～2025年</time>
+            <p class="section3-2-name">花火を楽しむ会</p>
+            </div>
+        </li>
+
+        <li class="section3-2-card">
+            <div class="section3-2-image section3-2-no-image">
+            <span class="section3-2-no-image-text">No Image</span>
+            </div>
+            <div class="section3-2-content">
+            <time class="section3-2-year">2023年～2025年</time>
+            <p class="section3-2-name">信州爆水RUN in 衣田川</p>
+            </div>
+        </li>
+
+        <li class="section3-2-card">
+            <div class="section3-2-image section3-2-no-image">
+            <span class="section3-2-no-image-text">No Image</span>
+            </div>
+            <div class="section3-2-content">
+            <time class="section3-2-year">2024年</time>
+            <p class="section3-2-name">キモノマルシェ in 信州上田</p>
+            </div>
+        </li>
+
+        <li class="section3-2-card">
+            <div class="section3-2-image section3-2-no-image">
+            <span class="section3-2-no-image-text">No Image</span>
+            </div>
+            <div class="section3-2-content">
+            <time class="section3-2-year">2025年11月</time>
+            <p class="section3-2-name">産業未来フェス</p>
+            </div>
+        </li>
+
+        </ul>
+
+    </div>
+    </section>
+    <!-- これまでの活動-パターン3 section-3-3 -->
+    <section class="section3-3-activities">
+    <div class="section3-3-inner">
+
+        <!-- セクションタイトル -->
+        <h2 class="section3-3-title">
+        <span>これまでの活動 パターン3</span>
+        </h2>
+
+        <!-- サブタイトル -->
+        <p class="section3-3-lead">主なボランティア活動</p>
+
+        <ul class="section3-3-list">
+
+        <!-- =====================
+            強調カード（画像あり）
+        ====================== -->
+
+        <li class="section3-3-card section3-3-card--featured">
+            <div class="section3-3-image">
+            <img src="images/activity-2024.jpg" alt="キモノマルシェ in 信州上田">
+            </div>
+            <div class="section3-3-content">
+            <time class="section3-3-year">2024年</time>
+            <p class="section3-3-name">キモノマルシェ in 信州上田</p>
+            </div>
+        </li>
+
+        <li class="section3-3-card section3-3-card--featured">
+            <div class="section3-3-image">
+            <img src="images/activity-2025.jpg" alt="産業未来フェス">
+            </div>
+            <div class="section3-3-content">
+            <time class="section3-3-year">2025年11月</time>
+            <p class="section3-3-name">産業未来フェス</p>
+            </div>
+        </li>
+
+        <!-- =====================
+            通常カード（テキストのみ）
+        ====================== -->
+
+        <li class="section3-3-card section3-3-card--simple">
+            <time class="section3-3-year">2020年～2026年</time>
+            <p class="section3-3-name">上田氷灯ろう夢まつり</p>
+        </li>
+
+        <li class="section3-3-card section3-3-card--simple">
+            <time class="section3-3-year">2023年～2025年</time>
+            <p class="section3-3-name">別所線とは走ろう、歩こう!! ラン＆ウォーク</p>
+        </li>
+
+        <li class="section3-3-card section3-3-card--simple">
+            <time class="section3-3-year">2023年～2025年</time>
+            <p class="section3-3-name">信州ルネッサンス野外フェスティバル</p>
+        </li>
+
+        <li class="section3-3-card section3-3-card--simple">
+            <time class="section3-3-year">2023年～2025年</time>
+            <p class="section3-3-name">花火を楽しむ会</p>
+        </li>
+
+        <li class="section3-3-card section3-3-card--simple">
+            <time class="section3-3-year">2023年～2025年</time>
+            <p class="section3-3-name">信州爆水RUN in 衣田川</p>
+        </li>
+
+        </ul>
+
+    </div>
+    </section>
+    <!-- これまでの活動-パターン4 section-3-4 -->
+    <section class="section3-4-activities">
+    <div class="section3-4-inner">
+
+        <h2 class="section3-4-title">
+        <span>これまでの活動 パターン4</span>
+        </h2>
+
+        <p class="section3-4-lead">主なボランティア活動</p>
+
+        <ul class="section3-4-list">
+
+        <!-- 2020年～2026年 -->
+        <li class="section3-4-card">
+            <div class="section3-4-summary">
+            <div>
+                <time class="section3-4-year">2020年～2026年</time>
+                <p class="section3-4-name">上田氷灯ろう夢まつり</p>
+            </div>
+            <button class="section3-4-toggle">詳細情報</button>
+            </div>
+            <div class="section3-4-detail">
+            <div class="section3-4-detail-image">
+                <img src="images/no-image.jpg" alt="上田氷灯ろう夢まつり">
+            </div>
+            <div class="section3-4-detail-content">
+                <h3>上田氷灯ろう夢まつり</h3>
+                <p>
+                冬の上田を彩る幻想的な祭り。
+                複数年にわたり設営・運営補助を担当し、
+                地域行事の継続と発展に貢献しました。
+                </p>
+            </div>
+            </div>
+        </li>
+
+        <!-- 2023年～2025年 -->
+        <li class="section3-4-card">
+            <div class="section3-4-summary">
+            <div>
+                <time class="section3-4-year">2023年～2025年</time>
+                <p class="section3-4-name">別所線とは走ろう、歩こう!! ラン＆ウォーク</p>
+            </div>
+            <button class="section3-4-toggle">詳細情報</button>
+            </div>
+            <div class="section3-4-detail">
+            <div class="section3-4-detail-image">
+                <img src="images/no-image.jpg" alt="別所線とは走ろう、歩こう!! ラン＆ウォーク">
+            </div>
+            <div class="section3-4-detail-content">
+                <h3>別所線とは走ろう、歩こう!! ラン＆ウォーク</h3>
+                <p>
+                地域鉄道を盛り上げる健康促進イベント。
+                受付・誘導・安全管理の補助を行い、参加者が安心して楽しめる運営を支えました。
+                </p>
+            </div>
+            </div>
+        </li>
+
+        <!-- 2023年～2025年 -->
+        <li class="section3-4-card">
+            <div class="section3-4-summary">
+            <div>
+                <time class="section3-4-year">2023年～2025年</time>
+                <p class="section3-4-name">信州ルネッサンス野外フェスティバル</p>
+            </div>
+            <button class="section3-4-toggle">詳細情報</button>
+            </div>
+            <div class="section3-4-detail">
+            <div class="section3-4-detail-image">
+                <img src="images/no-image.jpg" alt="信州ルネッサンス野外フェスティバル">
+            </div>
+            <div class="section3-4-detail-content">
+                <h3>信州ルネッサンス野外フェスティバル</h3>
+                <p>
+                音楽と文化を融合した野外フェス。
+                会場設営、運営補助、来場者案内を通じてイベント成功に貢献しました。
+                </p>
+            </div>
+            </div>
+        </li>
+
+        <!-- 2023年～2025年 -->
+        <li class="section3-4-card">
+            <div class="section3-4-summary">
+            <div>
+                <time class="section3-4-year">2023年～2025年</time>
+                <p class="section3-4-name">花火を楽しむ会</p>
+            </div>
+            <button class="section3-4-toggle">詳細情報</button>
+            </div>
+            <div class="section3-4-detail">
+            <div class="section3-4-detail-image">
+                <img src="images/no-image.jpg" alt="花火を楽しむ会">
+            </div>
+            <div class="section3-4-detail-content">
+                <h3>花火を楽しむ会</h3>
+                <p>
+                地域の夏のイベントで、観覧エリアの整理や安全管理を担当。
+                来場者が安心して花火を楽しめる運営をサポートしました。
+                </p>
+            </div>
+            </div>
+        </li>
+
+        <!-- 2023年～2025年 -->
+        <li class="section3-4-card">
+            <div class="section3-4-summary">
+            <div>
+                <time class="section3-4-year">2023年～2025年</time>
+                <p class="section3-4-name">信州爆水RUN in 衣田川</p>
+            </div>
+            <button class="section3-4-toggle">詳細情報</button>
+            </div>
+            <div class="section3-4-detail">
+            <div class="section3-4-detail-image">
+                <img src="images/no-image.jpg" alt="信州爆水RUN in 衣田川">
+            </div>
+            <div class="section3-4-detail-content">
+                <h3>信州爆水RUN in 衣田川</h3>
+                <p>
+                水辺で楽しむランニングイベント。
+                参加者の安全管理や運営補助を行い、イベント成功に貢献しました。
+                </p>
+            </div>
+            </div>
+        </li>
+
+        <!-- 2024年 -->
+        <li class="section3-4-card">
+            <div class="section3-4-summary">
+            <div>
+                <time class="section3-4-year">2024年</time>
+                <p class="section3-4-name">キモノマルシェ in 信州上田</p>
+            </div>
+            <button class="section3-4-toggle">詳細情報</button>
+            </div>
+            <div class="section3-4-detail">
+            <div class="section3-4-detail-image">
+                <img src="images/activity-2024.jpg" alt="キモノマルシェ in 信州上田">
+            </div>
+            <div class="section3-4-detail-content">
+                <h3>キモノマルシェ in 信州上田</h3>
+                <p>
+                着物文化の魅力を発信する地域イベント。
+                会場設営や来場者対応を通じて、地域文化と観光の活性化に貢献しました。
+                </p>
+            </div>
+            </div>
+        </li>
+
+        <!-- 2025年11月 -->
+        <li class="section3-4-card">
+            <div class="section3-4-summary">
+            <div>
+                <time class="section3-4-year">2025年11月</time>
+                <p class="section3-4-name">産業未来フェス</p>
+            </div>
+            <button class="section3-4-toggle">詳細情報</button>
+            </div>
+            <div class="section3-4-detail">
+            <div class="section3-4-detail-image">
+                <img src="images/activity-2025.jpg" alt="産業未来フェス">
+            </div>
+            <div class="section3-4-detail-content">
+                <h3>産業未来フェス</h3>
+                <p>
+                地域企業と学生をつなぐ産業イベント。
+                受付対応、会場案内、ステージ運営補助を担当し、
+                来場者が円滑にイベントを楽しめる環境づくりに貢献しました。
+                </p>
+            </div>
+            </div>
+        </li>
+
+        </ul>
+    </div>
+    </section>
+    <!-- これまでの活動-パターン5 section-3-5 -->
+<section class="section3-5-activities">
+  <div class="section3-5-inner">
+
+    <h2 class="section3-5-title">
+      <span>これまでの活動 パターン5</span>
+    </h2>
+
+    <p class="section3-5-lead">主なボランティア活動</p>
+
+    <!-- 強調カード（横並び） -->
+    <div class="section3-5-highlight-list">
+      <!-- キモノマルシェ -->
+      <div class="section3-5-highlight-card">
+        <h3 class="section3-5-highlight-name">キモノマルシェ in 信州上田</h3>
+        <div class="section3-5-highlight-image">
+          <img src="images/activity-2024.jpg" alt="キモノマルシェ in 信州上田">
+        </div>
+        <time class="section3-5-highlight-year">2024年</time>
+        <p class="section3-5-highlight-text">
+          着物文化の魅力を発信する地域イベント。
+          会場設営や来場者対応を通じて、地域文化と観光の活性化に貢献しました。
+        </p>
+        <a href="kimono-marche.html" class="section3-5-highlight-link">イベント詳細</a>
+      </div>
+
+      <!-- 産業未来フェス -->
+      <div class="section3-5-highlight-card">
+        <h3 class="section3-5-highlight-name">産業未来フェス</h3>
+        <div class="section3-5-highlight-image">
+          <img src="images/activity-2025.jpg" alt="産業未来フェス">
+        </div>
+        <time class="section3-5-highlight-year">2025年11月</time>
+        <p class="section3-5-highlight-text">
+          地域企業と学生をつなぐ産業イベント。
+          受付対応、会場案内、ステージ運営補助を担当し、
+          来場者が円滑にイベントを楽しめる環境づくりに貢献しました。
+        </p>
+        <a href="industry-future-fes.html" class="section3-5-highlight-link">イベント詳細</a>
+      </div>
+    </div>
+
+    <!-- 通常カード（残り5つ） -->
+    <ul class="section3-5-list">
+
+      <!-- 2020年～2026年 -->
+      <li class="section3-5-card">
+        <div class="section3-5-summary">
+          <div>
+            <time class="section3-5-year">2020年～2026年</time>
+            <p class="section3-5-name">上田氷灯ろう夢まつり</p>
+          </div>
+          <button class="section3-5-toggle">詳細情報</button>
+        </div>
+        <div class="section3-5-detail">
+          <div class="section3-5-detail-image">
+            <img src="images/no-image.jpg" alt="上田氷灯ろう夢まつり">
+          </div>
+          <div class="section3-5-detail-content">
+            <h3>上田氷灯ろう夢まつり</h3>
+            <p>
+              冬の上田を彩る幻想的な祭り。
+              複数年にわたり設営・運営補助を担当し、
+              地域行事の継続と発展に貢献しました。
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <!-- 2023年～2025年 -->
+      <li class="section3-5-card">
+        <div class="section3-5-summary">
+          <div>
+            <time class="section3-5-year">2023年～2025年</time>
+            <p class="section3-5-name">別所線とは走ろう、歩こう!! ラン＆ウォーク</p>
+          </div>
+          <button class="section3-5-toggle">詳細情報</button>
+        </div>
+        <div class="section3-5-detail">
+          <div class="section3-5-detail-image">
+            <img src="images/no-image.jpg" alt="別所線とは走ろう、歩こう!! ラン＆ウォーク">
+          </div>
+          <div class="section3-5-detail-content">
+            <h3>別所線とは走ろう、歩こう!! ラン＆ウォーク</h3>
+            <p>
+              地域鉄道を盛り上げる健康促進イベント。
+              受付・誘導・安全管理の補助を行い、参加者が安心して楽しめる運営を支えました。
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <!-- 2023年～2025年 -->
+      <li class="section3-5-card">
+        <div class="section3-5-summary">
+          <div>
+            <time class="section3-5-year">2023年～2025年</time>
+            <p class="section3-5-name">信州ルネッサンス野外フェスティバル</p>
+          </div>
+          <button class="section3-5-toggle">詳細情報</button>
+        </div>
+        <div class="section3-5-detail">
+          <div class="section3-5-detail-image">
+            <img src="images/no-image.jpg" alt="信州ルネッサンス野外フェスティバル">
+          </div>
+          <div class="section3-5-detail-content">
+            <h3>信州ルネッサンス野外フェスティバル</h3>
+            <p>
+              音楽と文化を融合した野外フェス。
+              会場設営、運営補助、来場者案内を通じてイベント成功に貢献しました。
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <!-- 2023年～2025年 -->
+      <li class="section3-5-card">
+        <div class="section3-5-summary">
+          <div>
+            <time class="section3-5-year">2023年～2025年</time>
+            <p class="section3-5-name">花火を楽しむ会</p>
+          </div>
+          <button class="section3-5-toggle">詳細情報</button>
+        </div>
+        <div class="section3-5-detail">
+          <div class="section3-5-detail-image">
+            <img src="images/no-image.jpg" alt="花火を楽しむ会">
+          </div>
+          <div class="section3-5-detail-content">
+            <h3>花火を楽しむ会</h3>
+            <p>
+              地域の夏のイベントで、観覧エリアの整理や安全管理を担当。
+              来場者が安心して花火を楽しめる運営をサポートしました。
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <!-- 2023年～2025年 -->
+      <li class="section3-5-card">
+        <div class="section3-5-summary">
+          <div>
+            <time class="section3-5-year">2023年～2025年</time>
+            <p class="section3-5-name">信州爆水RUN in 衣田川</p>
+          </div>
+          <button class="section3-5-toggle">詳細情報</button>
+        </div>
+        <div class="section3-5-detail">
+          <div class="section3-5-detail-image">
+            <img src="images/no-image.jpg" alt="信州爆水RUN in 衣田川">
+          </div>
+          <div class="section3-5-detail-content">
+            <h3>信州爆水RUN in 衣田川</h3>
+            <p>
+              水辺で楽しむランニングイベント。
+              参加者の安全管理や運営補助を行い、イベント成功に貢献しました。
+            </p>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+
+
+</main>
+<!-- =========================
+          フッター部
+=========================== -->
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <!-- 左：ナビ -->
+        <div class="footer-left">
+            <nav class="footer-nav">
+                <ul class="footer-nav-list">
+                    <li><a href="#">ホーム</a></li>
+                    <li><a href="#">私たちについて</a></li>
+                    <li><a href="#">イベント情報</a></li>
+                    <li><a href="#">ブログ</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- 中央：イベント -->
+        <div class="footer-center">
+            <h3 class="footer-center-title">イベント情報</h3>
+            <ul class="footer-event-list">
+                <li><a href="#">イベント詳細</a></li>
+                <li><a href="#">申込方法</a></li>
+                <li><a href="#">過去のイベント</a></li>
+            </ul>
+        </div>
+
+        <!-- 右：SNS -->
+        <div class="footer-right">
+            <div class="footer-sns">
+                <a href="#" class="sns-link" aria-label="Instagram">
+                    <span class="sns-icon">
+                        <img src="./image/Instagram.png" alt="">
+                    </span>
+                    <span class="sns-name">Instagram</span>
+                </a>
+
+                <a href="#" class="sns-link" aria-label="Facebook">
+                    <span class="sns-icon">
+                        <img src="./image/Facebook.png" alt="">
+                    </span>
+                    <span class="sns-name">Facebook</span>
+                </a>
+
+                <a href="#" class="sns-link" aria-label="Gmail">
+                    <span class="sns-icon">
+                        <img src="./image/Gmail.png" alt="">
+                    </span>
+                    <span class="sns-name">Gmail</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-copy-container">
+        <p class="footer-copy">© 2026 MIZUMATCH</p>
+    </div>
+</footer>
+
+<!-- =========================
+          JS部
+=========================== -->
+<script src="./js/header.js"></script>
+<script src="./js/section3-4.js"></script>
+<script src="./js/section3-5.js"></script>
+</body>
+</html>
