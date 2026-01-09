@@ -1,0 +1,148 @@
+/* =========================
+   Section3-4｜活動 パターン4
+========================= */
+.section3-4-activities {
+  padding: 96px 20px;
+}
+
+.section3-4-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* タイトル */
+.section3-4-title {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.section3-4-title span {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* サブタイトル */
+.section3-4-lead {
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1F5199;
+  margin-bottom: 48px;
+}
+
+/* リスト */
+.section3-4-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* カード */
+.section3-4-card {
+  background: #fff;
+  border: 1px solid #e6edf7;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* 要約行 */
+.section3-4-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+}
+
+.section3-4-year {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1F5199;
+}
+
+.section3-4-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* ボタン */
+.section3-4-toggle {
+  background: #1F5199;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* 詳細エリア（初期は非表示） */
+.section3-4-detail {
+  display: none;
+  border-top: 1px solid #e6edf7;
+  padding: 24px;
+  gap: 24px;
+}
+
+/* 展開時 */
+.section3-4-card.is-open .section3-4-detail {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+/* 画像 */
+.section3-4-detail-image {
+  aspect-ratio: 4 / 3;
+  background: #f1f6ff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.section3-4-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 詳細テキスト */
+.section3-4-detail-content h3,
+.section3-4-detail-content p {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.section3-4-detail-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.section3-4-detail-content p {
+  line-height: 1.7;
+  color: #333;
+}
+
+/* スマホ */
+@media (max-width: 768px) {
+  .section3-4-card.is-open .section3-4-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .section3-4-summary div {
+    flex: 1 1 auto;
+    min-width: 0; /* 文字の折り返しに必要 */
+  }
+
+  .section3-4-name {
+    font-size: 1rem;
+  }
+
+  .section3-4-toggle {
+    flex-shrink: 0;
+  }
+}
